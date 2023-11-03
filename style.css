@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+}
+
+.left {
+    background-image: url('assets/leaves.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 30vw;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+.right {
+    background-color: #f0f0f0;
+    height: 100%;
+    width: 70vw;
+}
+
+.logo-container {
+    background-color: rgb(0,0,0,0.5);
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    gap: 10px;
+    transform: translateY(-415%);
+}
+
+.logo-container img {
+    height: 12vh;
+}
+
+.logo-container .title {
+    font-family: 'Norse-Bold';
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 5rem;
+    padding-top: 25px;
+}
+
+.credit, .credit a {
+    color: white;
+   font-size: 0.9rem;
+}
+
+.credit {
+    margin: 0;
+    padding: 0 0 15px 0;
+}
