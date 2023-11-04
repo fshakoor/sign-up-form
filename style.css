@@ -10,9 +10,14 @@
 }
 
 @font-face {
-    font-family: "Roboto";
-    src: url("Roboto-Regular.ttf");
+    font-family: "Roboto-Medium";
+    src: url("Roboto-Medium.ttf");
   }
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("Roboto-Regular.ttf");
+}
 
 html, body {
     height: 100%;
@@ -27,7 +32,7 @@ body {
     background-image: url('assets/leaves.jpg');
     background-size: cover;
     height: 100%;
-    width: 35vw;
+    width: 30vw;
     display: flex;
     justify-content:space-evenly;
     align-items: center;
@@ -37,7 +42,7 @@ body {
 .right {
     background-color: #f0f0f0;
     height: 100%;
-    width: 65vw;
+    width: 70vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,28 +90,17 @@ body {
 }
 
 .first-top-text, .second-top-text, form legend {
-    font-weight: 900;
-    font-size: 1.5rem;
+    font-size: min(1.2rem, 2.2vw);
     margin: 0;
+    font-family: "Roboto-Medium";
 }
 
 .first-top-text, .second-top-text {
-    text-wrap:wrap;
+    text-wrap: wrap;
 }
 
 form legend {
     padding: 0 0 10px 0;
-}
-
-button {
-    width: max-content;
-    padding: 15px 50px;
-    border-radius: 8px;
-    border: 0;
-    background-color: #596D48;
-    color: white;
-    font-weight: 600;
-    box-shadow: 2px 2px 5px rgb(0,0,0,0.25);
 }
 
 .top-text {
@@ -120,40 +114,21 @@ button {
 
 form {
     background-color: white;
-    padding: 20px 0 0 50px;
+    padding: 2.5vh 0 0 50px;
     box-shadow: 10px 5px 8px rgb(0,0,0,0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: max-content;
-    gap: 10px;
+    gap: 2vh;
 }
 
 .inputs {
     display: flex;
-    gap: 1.5vw;
+    /* gap: 1.2vw; */
     flex-wrap: wrap;
-    width: 60%;
-    padding-bottom: 8vh;
-}
-
-.bottom {
-    padding-top: 5vh;
-    width: 100vw;
-    height: var(--footer);
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
-}
-
-.right p, form {
-    font-family: "Roboto";
-}
-
-.login {
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    width: 70%;
+    padding-bottom: 6vh;
 }
 
 .label-and-input-combo {
@@ -165,16 +140,85 @@ form {
     font-size: 0.6rem;
     letter-spacing: 1px;
     padding-bottom: 2px;
+    font-family: "Roboto-Regular";
 }
 
 .inputs input {
-    padding: 2px 5px 2px 5px;
-    width: 15vw;
-    min-height: 35px;
+    padding: 2vh 5vh 2vh 1vh;
+    width: 18vw;
+    height: 2vh;
+    margin-right: 4vw;
+    margin-bottom: 1vw;
+}
+
+.inputs input:not(.error) {
     border: 1px solid #E5E7EB;
     border-radius: 5px;
 }
 
-#first_name, #email, #password {
-    margin-right: 3vw;
+.inputs input:focus:not(.error) {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 1px 1px 5px rgb(0,0,0,0.25);
+}
+
+.bottom {
+    padding-top: 5vh;
+    width: 100vw;
+    height: var(--footer);
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+button {
+    width: max-content;
+    padding: 15px 50px;
+    border-radius: 8px;
+    border: 0;
+    background-color: #596D48;
+    color: white;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px rgb(0,0,0,0.25);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #738267;
+}
+
+.login {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Roboto-Regular";
+}
+
+.login a {
+    color: #6d7d5f;
+    text-decoration: none;
+    font-family: "Roboto-Medium";
+}
+
+.login a:hover {
+    color: #528329;
+}
+
+.error {
+    outline: none;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.error:focus {
+    box-shadow: 1px 1px 5px rgb(0,0,0,0.25);
+}
+
+span {
+    padding: 0;
+    margin: 0;
+    color: red;
+    font-size: 0.6rem;
+    font-family: "Roboto-Regular";
+    transform: translateY(-1.8vh);
 }

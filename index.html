@@ -45,12 +45,13 @@
                     
                     <div class="label-and-input-combo">
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password" />
+                        <input type="password" id="password" name="password" class="error"/>
+                        <span id='message'>*Passwords do not match</span>
                     </div>
                     
                     <div class="label-and-input-combo">
                         <label for="confirm_password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm_password" name="confirm_password" />
+                        <input type="password" id="confirm_password" name="confirm_password" class="error" onkeyup='check();'/>
                     </div>
                 </div>
         </form>
