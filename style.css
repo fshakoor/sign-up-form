@@ -11,12 +11,16 @@
 
 @font-face {
     font-family: "Roboto-Medium";
-    src: url("Roboto-Medium.ttf");
+    src: url("fonts/Roboto-Medium.ttf");
   }
 
 @font-face {
     font-family: "Roboto-Regular";
-    src: url("Roboto-Regular.ttf");
+    src: url("fonts/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: "Norse-Bold";
+    src: url("fonts/Norse-Bold.otf");
 }
 
 html, body {
@@ -74,8 +78,8 @@ body {
 }
 
 .credit, .credit a {
-    color: white;
-   font-size: 0.9rem;
+    color: rgb(255,255,255,0.75);
+   font-size: 0.6rem;
 }
 
 .credit {
@@ -83,6 +87,7 @@ body {
     margin: 0;
     padding: 0 0 15px 0;
     bottom: 0;
+    font-family: "Roboto-Regular";
 }
 
 .top-text, button, .login {
